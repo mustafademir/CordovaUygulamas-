@@ -40,7 +40,7 @@ export class DetailPage {
       this.comments = p;
       console.log(this.comments);
       for (let com of this.comments) {
-          if(com.postId == this.post.id){ // Hangi posta hangi comment in geldiğini kontrol ediliyor.
+          if(com.postId == this.post.id){ // Hangi posta hangi comment in geldiği kontrol ediliyor.
             this.aa.push(com);
           }
         }
