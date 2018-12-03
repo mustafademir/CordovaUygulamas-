@@ -34,13 +34,13 @@ export class DetailPage {
   //  .map(response => response.json());
 
   }
-
+  //Sunucudan aldığı verileri diziye aktaran metod
   takeComments(){
     this.getComments().subscribe( p=> {
       this.comments = p;
       console.log(this.comments);
       for (let com of this.comments) {
-          if(com.postId == this.post.id){
+          if(com.postId == this.post.id){ // Hangi posta hangi comment in geldiğini kontrol ediliyor.
             this.aa.push(com);
           }
         }
