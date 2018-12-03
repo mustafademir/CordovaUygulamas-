@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Main
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-card *ngFor= "let postItem of posts | slice:0:10">
+      <ion-card-content>
+      <ion-card-title (click)="goDetail(postItem,users[postItem.userId].name)">
+      {{postItem.title}}
+      </ion-card-title>
+      <p>
+        {{users[postItem.userId].name}}
+      </p>
+      <p>
+        {{postItem.body}}
+      </p>
+       </ion-card-content>
+    </ion-card>
+</ion-content>
